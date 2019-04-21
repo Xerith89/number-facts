@@ -14,7 +14,7 @@ function getFact()
         factTitle.style.display = "none";
         factBody.style.display = "none";
     } else {
-        fetch(url, {mode: 'no-cors'})
+        fetch(url,)
         .then((res) => {
         if (res.ok) {
         return res.text()
