@@ -5,7 +5,7 @@ document.querySelector('#number').addEventListener('input', (e) => getFact());
 function getFact()
 {
     let number = document.querySelector('#number').value;
-    let url = `https://numbersapi.com/${number}/trivia`;
+    let url = `http://numbersapi.com/${number}/trivia`;
     let factTitle = document.querySelector('#num-fact-title');
     let factBody = document.querySelector('#num-fact');
     const title = '<h3>Number Fact</h3>';
@@ -14,7 +14,7 @@ function getFact()
         factTitle.style.display = "none";
         factBody.style.display = "none";
     } else {
-        fetch(url)
+        fetch(url, mode: {'no-cors'})
         .then((res) => {
         if (res.ok) {
         return res.text()
