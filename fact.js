@@ -5,7 +5,7 @@ document.querySelector('#number').addEventListener('input', (e) => getFact());
 function getFact()
 {
     let number = document.querySelector('#number').value;
-    let url = `http://numbersapi.com/${number}/trivia`;
+    let url = `https://numbersapi.com/${number}/trivia`;
     let factTitle = document.querySelector('#num-fact-title');
     let factBody = document.querySelector('#num-fact');
     const title = '<h3>Number Fact</h3>';
